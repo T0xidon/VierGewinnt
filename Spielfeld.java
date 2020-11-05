@@ -61,8 +61,20 @@ public class Spielfeld
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-        boolean erg = false;
-        return erg;
+        for(int i = 0; i < Spielfeld.length; i++)
+        {
+            for(int a = 0; a < Spielfeld[0].length - 2; a++)
+            {
+                if(Spielfeld[i][a].gibZeichen() == Spielfeld[i][a+1].gibZeichen() && 
+                   Spielfeld[i][a].gibZeichen() == Spielfeld[i][a+2].gibZeichen() &&
+                   Spielfeld[i][a].gibZeichen() == Spielfeld[i][a+3].gibZeichen())                    
+                {
+                    boolean erg = true;
+                    return erg;
+                }
+            }
+        }
+        return false;
     }       
 
     /**
@@ -70,8 +82,19 @@ public class Spielfeld
      */
     private boolean pruefeVierInEinerZeile ()
     {
-        boolean erg = false;
-        return erg;
+        for(int i = 0; i < Spielfeld.length - 2; i++)
+        {
+            for(int a = 0; a < Spielfeld[0].length; a++)
+            {
+                if(Spielfeld[i][a].gibZeichen() == Spielfeld[i+1][a].gibZeichen() && 
+                   Spielfeld[i][a].gibZeichen() == Spielfeld[i+2][a].gibZeichen() &&
+                   Spielfeld[i][a].gibZeichen() == Spielfeld[i+3][a].gibZeichen())                    
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**
@@ -80,9 +103,20 @@ public class Spielfeld
      * entstehen können.
      */
     private boolean pruefeVierDiagonalLR ()
-    {
-        boolean erg = false;
-        return erg;
+    {        
+        for(int i = 0; i < Spielfeld.length - 2; i++)
+        {
+            for(int a = 0; a < Spielfeld[0].length - 2; a++)
+            {
+                if(Spielfeld[i][a].gibZeichen() == Spielfeld[i+1][a+1].gibZeichen() && 
+                   Spielfeld[i][a].gibZeichen() == Spielfeld[i+2][a+2].gibZeichen() &&
+                   Spielfeld[i][a].gibZeichen() == Spielfeld[i+3][a+3].gibZeichen())                    
+                {
+                    return true;
+                }                
+            }
+        }
+        return false;
     }
 
     /**
@@ -92,8 +126,19 @@ public class Spielfeld
      */
     private boolean pruefeVierDiagonalRL ()
     {
-        boolean erg = false;
-        return erg;
+        for(int i = Spielfeld.length; i > 2; i--)
+        {
+            for(int a = 0; a < Spielfeld[0].length - 2; a++)
+            {
+                if(Spielfeld[i][a].gibZeichen() == Spielfeld[i-1][a+1].gibZeichen() && 
+                   Spielfeld[i][a].gibZeichen() == Spielfeld[i-2][a+2].gibZeichen() &&
+                   Spielfeld[i][a].gibZeichen() == Spielfeld[i-3][a+3].gibZeichen())                    
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**

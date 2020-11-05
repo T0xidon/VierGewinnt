@@ -71,7 +71,7 @@ public class Spielfeld
     private boolean pruefeVierInEinerZeile ()
     {
         boolean erg = false;
-        return erg;
+         return erg;
     }
 
     /**
@@ -81,8 +81,17 @@ public class Spielfeld
      */
     private boolean pruefeVierDiagonalLR ()
     {
-        boolean erg = false;
-        return erg;
+        for(int i=0;i<Spielfeld.length-2;i++)
+        {
+            for(int a=0;a<Spielfeld[0].length-2;a++)
+            {
+                if (Spielfeld[i][a].gibZeichen() == Spielfeld[i+1][a+1].gibZeichen() &&
+                Spielfeld[i][a].gibZeichen() == Spielfeld[i+2][a+2].gibZeichen() &&
+                Spielfeld[i][a].gibZeichen() == Spielfeld[i+3][a+3].gibZeichen() )
+                    return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -101,7 +110,7 @@ public class Spielfeld
      */
     public void ausgeben()
     {
-        
+
     }
 
     /**
@@ -110,7 +119,7 @@ public class Spielfeld
      */
     public void ausgabeGewonnen (String Spieler)
     {
-        
+
     }
 
     /**
@@ -119,7 +128,7 @@ public class Spielfeld
      */
     public void neuesSpielfeldErzeugen ()
     { 
-        
+
     }
 
     public Stein [][] gibSpielfeld()

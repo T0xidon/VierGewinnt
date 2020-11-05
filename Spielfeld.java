@@ -141,12 +141,13 @@ public class Spielfeld
         return false;
     }
 
+
     /**
      * Diese Methode soll das Spielfeld so ausgeben, dass es für die Spieler gut bespielbar ist. Für ein leeres Feld soll das @-Zeichen ausgegeben werden.
      */
     public void ausgeben()
     {
-        
+
     }
 
     /**
@@ -155,7 +156,7 @@ public class Spielfeld
      */
     public void ausgabeGewonnen (String Spieler)
     {
-        
+
     }
 
     /**
@@ -164,7 +165,7 @@ public class Spielfeld
      */
     public void neuesSpielfeldErzeugen ()
     { 
-        
+
     }
 
     public Stein [][] gibSpielfeld()

@@ -147,7 +147,20 @@ public class Spielfeld
      */
     public void ausgeben()
     {
-
+        for(int i = 0; i > Spielfeld.length; i++)
+        {
+            for(int a = 0; a < Spielfeld[0].length; a++)
+            {
+                if(Spielfeld[i][a] == null)
+                {
+                    System.out.println("@");
+                }
+                else
+                {
+                    Spielfeld[i][a].gibZeichen();
+                }
+            }
+        }
     }
 
     /**

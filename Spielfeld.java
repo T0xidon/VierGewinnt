@@ -165,13 +165,7 @@ public class Spielfeld
      */
     public void neuesSpielfeldErzeugen ()
     { 
-         for(int i = 0; i > Spielfeld.length; i++)
-        {
-            for(int a = 0; a < Spielfeld[0].length; a++)
-            {
-                Spielfeld[i][a] = "@";
-            }
-        }
+
     }
 
     public Stein [][] gibSpielfeld()
